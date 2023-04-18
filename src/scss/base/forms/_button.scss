@@ -14,3 +14,28 @@
         background-color $transitionSpeed $transitionFunction,
         border $transitionSpeed $transitionFunction;
 }
+
+
+.btn-primary{
+    background-color: var(--blue);
+    color: var(--white);
+
+    height: 48px;
+    padding: 0 28px;
+    border-radius: 10px;
+
+    font-size: 14px;
+    line-height: math.div(22 , 14);
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+    @media (max-width:$tablet-max){
+        height: 42px;
+        padding: 0 24px;
+        font-size: 12px;
+    }
+}
