@@ -23,18 +23,8 @@
 
     &__title {
         max-width: 622px;
-
         margin: 0 auto;
-        @include adaptiveValue("font-size", 32, 18);
-        line-height: math.div(42, 32);
-        font-weight: 600;
-        @include fontRaleway;
-        color: var(--dark);
         text-align: center;
-
-        span {
-            color: var(--blue);
-        }
 
         @media (max-width:$smallTablet-max) {
             max-width: none;
