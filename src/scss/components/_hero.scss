@@ -1,0 +1,123 @@
+.hero {
+    margin-top: 8px;
+
+    .container {
+        @media (max-width:$smallTablet-max) {
+            padding: 0;
+        }
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__image {
+        width: 100%;
+        border-radius: 18px;
+
+        @media (max-width:$smallTablet-max) {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            object-position: 60% center;
+        }
+    }
+
+    &__content {
+        @media (max-width:$smallTablet-max) {
+            padding: 24px 24px 32px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__subtitle {
+        display: inline-block;
+
+        @media (min-width:$smallTablet-min) {
+            position: absolute;
+
+            top: 11.1%;
+            left: 6.6%;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            align-self: center;
+        }
+    }
+
+    &__title {
+        color: var(--dark);
+        @include adaptiveValue("font-size", 48, 28);
+        line-height: math.div(45, 48);
+        font-weight: 500;
+        @include fontRaleway;
+        max-width: 278px;
+
+        @media (min-width:$smallTablet-min) {
+            position: absolute;
+            top: 37%;
+            left: 6.8%;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            margin-top: 24px;
+            text-align: center;
+            max-width: none;
+        }
+    }
+
+    &__descr {
+        color: var(--dark);
+        font-size: 14px;
+        line-height: math.div(22, 14);
+        font-weight: 600;
+
+
+        @media (min-width:$smallTablet-min) {
+            position: absolute;
+            top: 11.1%;
+            left: 25.5%;
+            max-width: 416px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            margin-top: 24px;
+            text-align: center;
+        }
+    }
+
+    &__bubble-speech {
+
+
+        .bubble-speech {
+            max-width: 145px;
+            display: block;
+        }
+
+        @media (min-width:$smallTablet-min) {
+            position: absolute;
+            bottom: 31.5%;
+            left: 34.2%;
+
+            img {
+                position: absolute;
+                left: -11px;
+                transform: translateX(100%);
+            }
+        }
+
+        @media (max-width:$smallTablet-max) {
+            margin-top: 32px;
+            align-self: end;
+
+            img {
+                position: relative;
+                top: 10px;
+                left: 50px;
+                width: 100px;
+            }
+        }
+    }
+}

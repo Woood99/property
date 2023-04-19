@@ -4,9 +4,15 @@
 @include font-face("Manrope", "../fonts/ManropeBold", 700, normal);
 
 
+@include font-face("Raleway", "../fonts/RalewayMedium", 500, normal);
+@include font-face("Raleway", "../fonts/RalewaySemiBold", 600, normal);
 
 
 
+
+@mixin fontRaleway {
+    font-family: 'Raleway', sans-serif;
+}
 
 
 // ====================================================================================

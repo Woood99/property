@@ -1,3 +1,43 @@
 .title {}
 
-.subtitle {}
+.subtitle {
+    @include fontRaleway;
+    color: var(--blue);
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 600;
+
+    background-color: var(--white);
+    border-radius: 29px;
+
+    padding: 7px 18px;
+}
+
+.bubble-speech {
+    color: #292D32;
+
+    font-size: 12px;
+    line-height: math.div(16, 12);
+    font-weight: 500;
+    padding: 11px 28px;
+
+    background-color: var(--white);
+
+    border-radius: 29px;
+    text-align: center;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        right: 17px;
+        transform: translateY(100%);
+        background-image: url('../img/arrow-down.svg');
+        background-repeat: no-repeat;
+        background-size: 23px 12px;
+        display: block;
+        width: 23px;
+        height: 12px;
+    }
+}
