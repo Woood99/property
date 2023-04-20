@@ -38,6 +38,19 @@ function initSliders() {
             },
         });
     }
+    if (document.querySelector('.gallery-slider')) {
+        new Swiper('.gallery-slider', {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 12,
+            speed: 800,
+            navigation: {
+                prevEl: document.querySelector('.contacts .navigation-primary__arrow-prev'),
+                nextEl: document.querySelector('.contacts .navigation-primary__arrow-next'),
+            },
+        });
+    }
 
 
 

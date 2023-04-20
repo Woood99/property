@@ -1,5 +1,5 @@
 .app-info {
-    margin-top: 95px;
+  margin-top: 24px;
 
     .container {
         @media (max-width:$smallTablet-max) {
@@ -9,14 +9,7 @@
 
     &__container {}
 
-    &__title {
-        margin: 0 auto;
-        text-align: center;
-        max-width: 580px;
-    }
-
     &__body {
-        margin-top: 130px;
         display: grid;
         grid-template-columns: percent(526, 1296) percent(746, 1296);
         justify-content: space-between;
@@ -25,11 +18,9 @@
         @media (max-width:$tablet-max) {
             grid-template-columns: 1fr;
             grid-row-gap: 40px;
-            margin-top: 100px;
         }
 
         @media (max-width:$smallTablet-max) {
-            margin-top: 80px;
             grid-row-gap: 16px;
         }
     }
@@ -76,7 +67,6 @@
         @media (max-width:$tablet-max) {
             width: auto;
             height: 100%;
-            top: -40px;
         }
     }
 
@@ -137,6 +127,11 @@
         .bubble-speech {
             max-width: 311px;
             display: block;
+
+            background: rgba(255, 255, 255, 0.85);
+            box-shadow: 0px 4.7px 34px rgba(0, 0, 0, 0.12);
+            backdrop-filter: blur(9px);
+            border-radius: 30px;
 
             &::before {
                 right: 50%;
