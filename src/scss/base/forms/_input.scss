@@ -31,7 +31,7 @@ textarea.input-reset {
         margin-bottom: 16px;
 
         @media (max-width:$tablet-max) {
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             font-size: 14px;
         }
     }
@@ -88,6 +88,19 @@ textarea.input-reset {
 
         @media (max-width:$smallTablet-max) {
             --height: 140px;
+        }
+    }
+
+    .just-validate-error-label {
+        margin-top: 5px;
+        margin-left: 24px;
+        color: var(--blue) !important; // need hack :(
+
+        font-size: 12px;
+        line-height: math.div(12, 12);
+
+        @media (max-width:$tablet-max) {
+            margin-left: 16px;
         }
     }
 }

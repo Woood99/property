@@ -32,14 +32,39 @@ import "./functions/sliders";
 // ========================================================================================
 
 
-// import validateForms from './functions/validate-forms';
-// const rules1 = [...];
+import validateForms from './functions/validate-forms';
+const feedbackFormRules = [{
+        ruleSelector: '.feedback-form__input--name',
+        rules: [{
+                rule: 'minLength',
+                value: 3,
+                errorMessage: 'Имя должно состоять как минимум из :value символов'
+            },
+            {
+                rule: 'required',
+                value: true,
+                errorMessage: 'Заполните имя!'
+            }
+        ]
+    },
+    {
+        ruleSelector: '.feedback-form__input--tel',
+        tel: true,
+        telError: 'Введите корректный телефон',
+        rules: [{
+            rule: 'required',
+            value: true,
+            errorMessage: 'Заполните телефон!'
+        }]
+    },
+];
 
-// const afterForm = () => {
-//   console.log('Произошла отправка');
-// };
 
-// validateForms('.form-1', rules1, afterForm);
+const afterForm = () => {
+    console.log('Произошла отправка');
+};
+
+validateForms('.feedback__form', feedbackFormRules, afterForm);
 
 
 

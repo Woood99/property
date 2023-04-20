@@ -2,6 +2,7 @@
   --dark: #212121;
   --white: #fff;
   --blue: #3757ff;
+  --blue-dark: #1935c0;
   --melrose: #9eb3ff;
   --index-1: 1;
   --index-2: 2;
@@ -190,6 +191,11 @@ a {
   justify-content: center;
   white-space: nowrap;
 }
+@media (min-width: 769px) {
+  .btn-primary:hover {
+    background-color: var(--blue-dark);
+  }
+}
 @media (max-width: 1024px) {
   .btn-primary {
     height: 42px;
@@ -226,7 +232,7 @@ textarea.input-reset {
 }
 @media (max-width: 1024px) {
   .label-primary span {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     font-size: 14px;
   }
 }
@@ -302,6 +308,18 @@ textarea.input-reset {
 @media (max-width: 768px) {
   .label-primary__textarea {
     --height: 140px;
+  }
+}
+.label-primary .just-validate-error-label {
+  margin-top: 5px;
+  margin-left: 24px;
+  color: var(--blue) !important;
+  font-size: 12px;
+  line-height: 1;
+}
+@media (max-width: 1024px) {
+  .label-primary .just-validate-error-label {
+    margin-left: 16px;
   }
 }
 
@@ -802,6 +820,11 @@ textarea.input-reset {
     gap: 25px;
   }
 }
+@media (max-width: 768px) {
+  .header__actions .header__btn {
+    display: none;
+  }
+}
 .header__tel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1267,17 +1290,17 @@ textarea.input-reset {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
-    height: 300px;
+    height: 360px;
   }
 }
 @media (max-width: 768px) {
   .contacts__gallery {
-    height: 270px;
+    height: 300px;
   }
 }
 @media (max-width: 576px) {
   .contacts__gallery {
-    height: 240px;
+    height: 275px;
   }
 }
 .contacts__navigation {
@@ -1332,12 +1355,7 @@ textarea.input-reset {
 }
 @media (max-width: 768px) {
   .contacts {
-    margin-top: 75px;
-  }
-}
-@media (max-width: 576px) {
-  .contacts {
-    margin-top: 65px;
+    margin-top: 85px;
   }
 }
 

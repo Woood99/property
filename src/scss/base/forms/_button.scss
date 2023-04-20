@@ -34,6 +34,12 @@
 
     white-space: nowrap;
 
+    @media (min-width:$smallTablet-min) {
+        &:hover {
+            background-color: var(--blue-dark);
+        }
+    }
+
     @media (max-width:$tablet-max) {
         height: 42px;
         padding: 0 24px;
