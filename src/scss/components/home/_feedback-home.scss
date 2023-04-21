@@ -1,4 +1,4 @@
-.feedback {
+.feedback-home {
     margin-top: 24px;
     margin-bottom: 45px;
 
@@ -46,53 +46,5 @@
         background: #EAEEFA;
         margin-bottom: 24px;
         border-radius: 24px;
-    }
-}
-
-.feedback-form {
-    position: relative;
-    z-index: 1;
-    max-width: 550px;
-    margin: 65px auto 0;
-
-    display: flex;
-    flex-direction: column;
-
-    &__label {
-        &:not(:first-child) {
-            margin-top: 24px;
-
-            @media (max-width:$smallTablet-max) {
-                margin-top: 16px;
-            }
-        }
-    }
-
-    &__input {}
-
-    &__textarea {}
-
-    &__btn {
-        margin-top: 12px;
-
-        @media (min-width:$smallTablet-min) {
-            border-radius: 16px;
-            font-size: 16px;
-            height: 61px;
-        }
-    }
-
-    &__warning {
-        margin-top: 8px;
-        color: #748CD7;
-        font-size: 12px;
-        line-height: math.div(16, 12);
-        font-weight: 500;
-    }
-
-    @media (max-width:$smallTablet-max) {
-        max-width: none;
-        width: 100%;
-        margin: 40px 0 0;
     }
 }

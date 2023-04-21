@@ -64,7 +64,7 @@ const afterForm = () => {
     console.log('Произошла отправка');
 };
 
-validateForms('.feedback__form', feedbackFormRules, afterForm);
+validateForms('.feedback-form', feedbackFormRules, afterForm);
 
 
 

@@ -1,4 +1,4 @@
-.about {
+.about-home {
     margin-top: 24px;
 
     &__body {
@@ -17,9 +17,7 @@
         }
     }
 }
-
-
-.about-top {
+.about-home-top {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 24px;
@@ -63,8 +61,7 @@
         grid-row-gap: 8px;
     }
 }
-
-.about-body {
+.about-home-body {
     display: flex;
     justify-content: space-between;
 
@@ -113,12 +110,7 @@
         flex-direction: column;
     }
 }
-
-
-
-
-
-.about-bottom {
+.about-home-bottom {
     display: flex;
 
     &__item {

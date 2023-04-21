@@ -84,7 +84,7 @@ const feedbackFormRules = [{
 const afterForm = () => {
   console.log('Произошла отправка');
 };
-(0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_2__["default"])('.feedback__form', feedbackFormRules, afterForm);
+(0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_2__["default"])('.feedback-form', feedbackFormRules, afterForm);
 
 // ========================================================================================
 
@@ -405,16 +405,16 @@ swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MOD
 // =========================================================================================
 
 function initSliders() {
-  if (document.querySelector('.news__slider')) {
-    new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.news__slider', {
+  if (document.querySelector('.news-home__slider')) {
+    new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.news-home__slider', {
       observer: true,
       observeParents: true,
       slidesPerView: 1.2,
       spaceBetween: 12,
       speed: 800,
       navigation: {
-        prevEl: document.querySelector('.news .navigation-primary__arrow-prev'),
-        nextEl: document.querySelector('.news .navigation-primary__arrow-next')
+        prevEl: document.querySelector('.news-home .navigation-primary__arrow-prev'),
+        nextEl: document.querySelector('.news-home .navigation-primary__arrow-next')
       },
       breakpoints: {
         768: {
@@ -432,8 +432,8 @@ function initSliders() {
       spaceBetween: 12,
       speed: 800,
       navigation: {
-        prevEl: document.querySelector('.contacts .navigation-primary__arrow-prev'),
-        nextEl: document.querySelector('.contacts .navigation-primary__arrow-next')
+        prevEl: document.querySelector('.contacts-home .navigation-primary__arrow-prev'),
+        nextEl: document.querySelector('.contacts-home .navigation-primary__arrow-next')
       }
     });
   }

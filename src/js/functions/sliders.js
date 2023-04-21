@@ -18,16 +18,16 @@ Swiper.use([Navigation, Pagination]);
 function initSliders() {
 
 
-    if (document.querySelector('.news__slider')) {
-        new Swiper('.news__slider', {
+    if (document.querySelector('.news-home__slider')) {
+        new Swiper('.news-home__slider', {
             observer: true,
             observeParents: true,
             slidesPerView: 1.2,
             spaceBetween: 12,
             speed: 800,
             navigation: {
-                prevEl: document.querySelector('.news .navigation-primary__arrow-prev'),
-                nextEl: document.querySelector('.news .navigation-primary__arrow-next'),
+                prevEl: document.querySelector('.news-home .navigation-primary__arrow-prev'),
+                nextEl: document.querySelector('.news-home .navigation-primary__arrow-next'),
             },
 
             breakpoints: {
@@ -46,8 +46,8 @@ function initSliders() {
             spaceBetween: 12,
             speed: 800,
             navigation: {
-                prevEl: document.querySelector('.contacts .navigation-primary__arrow-prev'),
-                nextEl: document.querySelector('.contacts .navigation-primary__arrow-next'),
+                prevEl: document.querySelector('.contacts-home .navigation-primary__arrow-prev'),
+                nextEl: document.querySelector('.contacts-home .navigation-primary__arrow-next'),
             },
         });
     }

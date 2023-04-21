@@ -12,11 +12,52 @@
 .btn {
     transition: color $transitionSpeed $transitionFunction,
         background-color $transitionSpeed $transitionFunction,
-        border $transitionSpeed $transitionFunction;
+        border $transitionSpeed $transitionFunction,
+        box-shadow $transitionSpeed $transitionFunction;
 }
 
 
 .btn-primary {
+    background-color: var(--blue);
+    color: var(--white);
+
+    height: 61px;
+    padding: 0 40px;
+    border-radius: 16px;
+
+    font-size: 14px;
+    line-height: math.div(22, 14);
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+    &:focus{
+        background-color: var(--blue-dark);
+    }
+    &:disabled{
+        background-color: #d5d5d5;
+    }
+    @media (min-width:$smallTablet-min) {
+        &:hover {
+            box-shadow: 0px 56px 22px rgba(55, 82, 215, 0.01), 
+            0px 32px 19px rgba(55, 82, 215, 0.05), 
+            0px 14px 14px rgba(55, 82, 215, 0.09), 
+            0px 4px 8px rgba(55, 82, 215, 0.1), 
+            0px 0px 0px rgba(55, 82, 215, 0.1);
+        }
+    }
+
+    @media (max-width:$tablet-max) {
+        height: 50px;
+        padding: 0 30px;
+        font-size: 13px;
+    }
+}
+
+.btn-secondary {
     background-color: var(--blue);
     color: var(--white);
 
@@ -33,16 +74,26 @@
     justify-content: center;
 
     white-space: nowrap;
-
+    &:focus{
+        background-color: var(--blue-dark);
+    }
+    &:disabled{
+        background-color: #d5d5d5;
+    }
     @media (min-width:$smallTablet-min) {
         &:hover {
-            background-color: var(--blue-dark);
+            box-shadow: 0px 56px 22px rgba(55, 82, 215, 0.01), 
+            0px 32px 19px rgba(55, 82, 215, 0.05), 
+            0px 14px 14px rgba(55, 82, 215, 0.09), 
+            0px 4px 8px rgba(55, 82, 215, 0.1), 
+            0px 0px 0px rgba(55, 82, 215, 0.1);
         }
     }
 
     @media (max-width:$tablet-max) {
         height: 42px;
-        padding: 0 24px;
-        font-size: 12px;
+        padding: 0 22px;
+        font-size: 13px;
     }
 }
+

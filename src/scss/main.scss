@@ -22,6 +22,7 @@
 
 // small components
 @import "./small-components/nav";
+@import "./small-components/feedback-form";
 
 
 // =============================================================================================================
@@ -29,12 +30,6 @@
 
 // big components
 @import "./components/header";
-@import "./components/hero";
-@import "./components/about";
-@import "./components/contacts";
-@import "./components/news";
-@import "./components/app-info";
-@import "./components/feedback";
 @import "./components/footer";
 
 
@@ -42,8 +37,7 @@
 
 
 // pages
-// @import "./components/asd";
+@import "./components/home";
 
 
 // =============================================================================================================
-

@@ -1,4 +1,4 @@
-.news {
+.news-home {
     margin-top: 24px;
 
     &__wrapper {
@@ -47,15 +47,6 @@
 
     &__more {
         justify-self: center;
-
-        padding: 0 40px;
-        height: 61px;
-        border-radius: 16px;
-
-        @media (max-width:$tablet-max) {
-            height: 50px;
-            padding: 0 40px;
-        }
 
         @media (max-width:$mobile-max) {
             justify-self: auto;

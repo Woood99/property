@@ -1,13 +1,11 @@
-.app-info {
-  margin-top: 24px;
+.app-info-home {
+    margin-top: 24px;
 
     .container {
         @media (max-width:$smallTablet-max) {
             padding: 0;
         }
     }
-
-    &__container {}
 
     &__body {
         display: grid;
@@ -105,16 +103,11 @@
     }
 
     &__btn {
-        padding: 0 40px;
-        border-radius: 16px;
-
-        @media (min-width:$tablet-min) {
-            align-self: start;
-            height: 61px;
-            margin-top: auto;
-        }
+        align-self: start;
+        margin-top: auto;
 
         @media (max-width:$tablet-max) {
+            margin-top: 0;
             align-self: center;
         }
     }

@@ -1,4 +1,4 @@
-.contacts {
+.contacts-home {
     margin-top: 170px;
 
     .container {
@@ -124,18 +124,7 @@
     }
 }
 
-.gallery-slider {}
-
-.navigation-primary {
-
-    &__arrow {}
-
-    &__arrow-prev {}
-
-    &__arrow-next {}
-}
-
-.contacts-info {
+.contacts-home-info {
     background-color: var(--white);
     border: 1px solid #D8D8D8;
     border-radius: 30px;
