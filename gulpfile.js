@@ -11,7 +11,6 @@ const browserSync = require('browser-sync').create();
 const sass = require('sass');
 const gulpSass = require('gulp-sass');
 const svgSprite = require('gulp-svg-sprite');
-const svgmin = require('gulp-svgmin');
 const cheerio = require('gulp-cheerio');
 const replace = require('gulp-replace');
 const fileInclude = require('gulp-file-include');
@@ -58,13 +57,6 @@ const clean = () => {
 //svg sprite
 const svgSprites = () => {
     return src(paths.srcSvg)
-        .pipe(
-            svgmin({
-                js2svg: {
-                    pretty: true,
-                },
-            })
-        )
         .pipe(
             cheerio({
                 run: function ($) {

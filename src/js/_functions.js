@@ -9,9 +9,8 @@ burgerMenu();
 
 
 // Модальное окно
-// import popup from './functions/popup'
-// const call = new popup();
-
+import popup from './functions/popup'
+const requestPopup = new popup();
 
 // ========================================================================================
 
@@ -58,13 +57,42 @@ const feedbackFormRules = [{
         }]
     },
 ];
+const requestFormRules = [{
+        ruleSelector: '.request__label--name input',
+        rules: [{
+                rule: 'minLength',
+                value: 3,
+                errorMessage: 'Имя должно состоять как минимум из :value символов'
+            },
+            {
+                rule: 'required',
+                value: true,
+                errorMessage: 'Заполните имя!'
+            }
+        ]
+    },
+    {
+        ruleSelector: '.request__label--tel input',
+        tel: true,
+        telError: 'Введите корректный телефон',
+        rules: [{
+            rule: 'required',
+            value: true,
+            errorMessage: 'Заполните телефон!'
+        }]
+    },
+];
 
 
 const afterForm = () => {
     console.log('Произошла отправка');
 };
-
-validateForms('.feedback-form', feedbackFormRules, afterForm);
+if (document.querySelector('.feedback-form')) {
+    validateForms('.feedback-form', feedbackFormRules, afterForm);
+}
+if (document.querySelector('.request__body')) {
+    validateForms('.request__body', requestFormRules, afterForm);
+}
 
 
 
@@ -73,8 +101,8 @@ validateForms('.feedback-form', feedbackFormRules, afterForm);
 
 
 // Спойлеры
-// import spollers from "./functions/spollers";
-// spollers();
+import spollers from "./functions/spollers";
+spollers();
 
 
 

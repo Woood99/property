@@ -1,0 +1,102 @@
+.select-primary {
+    width: 196px;
+
+    .choices {
+        background-color: transparent;
+        overflow: visible;
+        overflow: 0;
+        border-radius: 11px;
+        border: 1px solid #292D32;
+        transition: border-radius $transitionSpeed $transitionFunction;
+        height: 35px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        &::after {
+            border: none;
+            width: 10px;
+            height: 7px;
+            background-color: transparent;
+            background-image: url('../img/check-down.svg');
+            background-repeat: no-repeat;
+            transition: transform $transitionSpeed $transitionFunction;
+            display: block;
+
+            margin-top: 0;
+            top: -9px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 16px;
+        }
+
+        &.is-open {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+            &::after {
+                margin-top: 0;
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+
+    .choices__list--dropdown {
+        margin-top: 0;
+        left: -1px;
+        border-bottom-left-radius: 11px;
+        border-bottom-right-radius: 11px;
+        z-index: 5;
+        border: 1px solid #292D32 !important; // Hack! need to be redefined choices
+        transition: visibility $transitionSpeed $transitionFunction,
+            opacity $transitionSpeed $transitionFunction,
+            transform $transitionSpeed $transitionFunction;
+        opacity: 0;
+        transform: translateY(10px);
+        width: 196px;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .choices__item {
+            font-size: 14px;
+            line-height: math.div(16, 13);
+            padding: 7px 20px;
+
+            &.is-selected {
+                opacity: 0.45;
+                pointer-events: none;
+            }
+        }
+
+        @media (max-width:$smallTablet-max) {
+            left: -0.5px;
+        }
+    }
+
+    .choices__inner {
+        padding: 0 !important; // Hack! need to be redefined choices
+        background-color: transparent;
+        border-radius: 0;
+        border: none;
+        min-height: auto;
+        line-height: 0;
+    }
+
+    .choices__list--single {
+        padding: 0;
+        font-size: 14px;
+        line-height: math.div(22, 14);
+
+        width: calc(100% - 30px);
+
+        >.choices__item--selectable {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

@@ -16,7 +16,9 @@
 
         &:focus+.radio__label:before {}
 
-        &:checked+.radio__label:before {}
+        &:checked+.radio__label:before {
+            border: 1px solid var(--blue);
+        }
 
         &:checked+.radio__label:after {
             transform: scale(1);
@@ -31,21 +33,22 @@
         &:before {
             content: "";
             align-self: flex-start;
-            width: 20px;
-            height: 20px;
-            flex: 0 0 20px;
+            width: 22px;
+            height: 22px;
+            flex: 0 0 22px;
             border-radius: 50%;
-            border: 1px solid #a7a9ac;
+            border: 1px solid #292D32;
+            transition: border $transitionSpeed $transitionFunction;
         }
 
         &:after {
             content: "";
             transition: all 0.3s ease 0s;
             transform: scale(0);
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-            background-color: #77243a;
+            background-color: var(--blue);
             position: absolute;
             left: 5px;
             top: 5px;
@@ -53,6 +56,9 @@
     }
 
     &__text {
-        margin-left: 10px;
+        margin-left: 13px;
+        color: var(--dark);
+        font-size: 16px;
+        line-height: math.div(22, 16);
     }
 }

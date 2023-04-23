@@ -15,6 +15,9 @@
 // ui components
 @import "./ui-kit/info-card";
 @import "./ui-kit/news-card";
+@import "./ui-kit/breadcrumbs";
+@import "./ui-kit/tooltip";
+@import "./ui-kit/select";
 
 
 // =============================================================================================================
@@ -38,6 +41,7 @@
 
 // pages
 @import "./components/home";
+@import "./components/contacts";
 
 
 // =============================================================================================================

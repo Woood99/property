@@ -1,0 +1,61 @@
+<div class="popup">
+    <div class="popup__container request" role="dialog" aria-modal="true" data-popup-target="request">
+        <button class="btn-reset js-popup-close popup__close" aria-label="Закрыть модальное окно">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 33C26.25 33 33 26.25 33 18C33 9.75 26.25 3 18 3C9.75 3 3 9.75 3 18C3 26.25 9.75 33 18 33Z"
+                    fill="currentColor" stroke="#3757FF" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M13.7549 22.245L22.2449 13.755" stroke="#3757FF" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M22.2449 22.245L13.7549 13.755" stroke="#3757FF" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="popup__content request__container">
+            <h2 class="request__title text-32">
+                Оставьте заявку
+            </h2>
+            <form action="#" class="request__body">
+                <label class="request__label request__label--name label-primary">
+                    <span>Как вас зовут?</span>
+                    <input type="text" name="Имя" class="input-reset label-primary__input" placeholder="Имя">
+                </label>
+                <label class="request__label request__label--tel label-primary">
+                    <span>Ваш номер телефона</span>
+                    <input type="tel" name="Номер телефона" class="input-reset label-primary__input" placeholder="+7">
+                </label>
+                <div class="request__radio">
+                    <span>Мы хотим позвонить, но если говорить неудобно — напишем!</span>
+                    <div class="radio">
+                        <div class="radio__item">
+                            <input hidden id="o_1" class="radio__input" checked type="radio" value="1" name="option">
+                            <label for="o_1" class="radio__label"><span class="radio__text">Конечно,
+                                    звоните</span></label>
+                        </div>
+                        <div class="radio__item">
+                            <input hidden id="o_2" class="radio__input" type="radio" value="2" name="option">
+                            <label for="o_2" class="radio__label"><span class="radio__text">Лучше
+                                    пишите сюда</span></label>
+                        </div>
+                    </div>
+                    <div class="select-primary">
+                        <select class="select-primary__body">
+                            <option value="1">Telegram</option>
+                            <option value="1">WhatsApp</option>
+                            <option value="1">VK</option>
+                        </select>
+                    </div>
+                </div>
+                <label class="request__label request__label--textarea label-primary">
+                    <span>Опишите вашу проблему</span>
+                    <textarea class="input-reset label-primary__textarea"
+                        placeholder="Например: ЖК Прайм Тайм, 3 подъезд, сломана ручка входной двери"></textarea>
+                </label>
+                <button type="submit" class="btn btn-reset btn-primary request__btn">Отправить</button>
+                <p class="request__warning">
+                    Нажимая кнопку «Отправить» вы подтверждаете своё согласие на обработку персональных данных
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

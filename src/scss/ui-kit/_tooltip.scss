@@ -1,0 +1,24 @@
+.tooltip-visible {
+    color: #839AE0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+    }
+
+    &__text {
+        margin-top: 10px;
+        color: inherit;
+        font-size: 12px;
+        line-height: math.div(16, 12);
+        font-weight: 500;
+
+        @media (max-width:$smallTablet-max) {
+            margin-top: 8px;
+        }
+    }
+}
