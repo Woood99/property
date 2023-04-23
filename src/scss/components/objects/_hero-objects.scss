@@ -1,0 +1,81 @@
+.hero-objects {
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    &__title {}
+
+    .container {
+        @media (max-width:$smallTablet-max) {
+            padding: 0;
+        }
+    }
+
+    &__body {
+        margin-top: 32px;
+        background-color: #f9f9fb;
+        border-radius: 24px;
+        padding: 56px 90px calc(56px + 24px);
+
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 24px;
+            border-radius: 16px;
+            padding: 32px 16px calc(32px + 16px);
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid #e6ebfa;
+
+        line-height: math.div(23, 18);
+        font-weight: 500;
+        padding: 26px 0;
+
+        font-size: 18px;
+        line-height: math.div(23, 18);
+
+        >div {
+            margin-right: 25px;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+
+            svg {
+                width: 24px;
+                height: 24px;
+                stroke: #9b9da7;
+                stroke-width: 1.5px;
+                fill: none;
+            }
+
+            span {
+                margin-left: 10px;
+                font-weight: 600;
+            }
+        }
+
+        >span {
+            display: block;
+
+            @media (max-width:$mobile-max) {
+                margin-top: 16px;
+            }
+        }
+
+        @media (max-width:$tablet-max) {
+            padding: 16px 0;
+            font-size: 16px;
+        }
+
+        @media (max-width:$mobile-max) {
+            font-size: 14px;
+            flex-direction: column;
+        }
+    }
+}

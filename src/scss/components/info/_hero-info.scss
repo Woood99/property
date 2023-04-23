@@ -1,0 +1,25 @@
+.hero-info {
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    .container {
+        @media (max-width:$smallTablet-max) {
+            padding: 0;
+        }
+    }
+
+    &__title {}
+
+    &__body {
+        margin-top: 32px;
+        background-color: #f9f9fb;
+        border-radius: 24px;
+        padding: 56px 90px calc(56px + 24px);
+
+        @media (max-width:$tablet-max) {
+            margin-top: 24px;
+            border-radius: 16px;
+            padding: 32px 24px calc(32px + 16px);
+        }
+    }
+}

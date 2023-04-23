@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+"title": "Объекты"
+})
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main">
+            <div class="breadcrumbs container breadcrumbs--gap-page">
+                <ul class="breadcrumbs__list list-reset">
+                    <li class="breadcrumbs__item">
+                        <a href="#">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item breadcrumbs__item--last">
+                        <span>Объекты</span>
+                    </li>
+                </ul>
+            </div>
+            @include('partials/objects/hero-objects.html')
+        </main>
+        @include('partials/footer.html')
+    </div>
+    @include('partials/popup.html')
+</body>
+
+
+</html>
