@@ -1,0 +1,121 @@
+.card {
+
+    &__wrapper {
+        height: 100%;
+        padding: 24px;
+        background-color: var(--white);
+        box-shadow: 0px 29px 17px rgba(73, 90, 255, 0.01),
+            0px 13px 13px rgba(73, 90, 255, 0.01),
+            0px 4px 7px rgba(73, 90, 255, 0.01),
+            0px 0px 0px rgba(73, 90, 255, 0.01);
+        border-radius: 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width:$tablet-max) {
+            padding: 12px;
+            border-radius: 16px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            padding: 8px;
+            border-radius: 12px;
+            ;
+        }
+    }
+
+    &__image {
+        padding-bottom: percent(177, 473);
+
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s $transitionFunction;
+        }
+
+        @media (max-width:$tablet-max) {
+            border-radius: 16px;
+
+            img {
+                border-radius: 16px;
+            }
+        }
+
+        @media (max-width:$smallTablet-max) {
+            border-radius: 12px;
+
+            img {
+                border-radius: 12px;
+            }
+        }
+    }
+
+    &__content {
+        padding: 0 8px 8px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__descr {
+        margin-top: 24px;
+        margin-bottom: 16px;
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: math.div(19, 14);
+        color: #292D32;
+        flex-grow: 1;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 16px;
+            font-weight: 400;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+    }
+
+    &__time {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        line-height: math.div(19, 14);
+        color: #9ab0f5;
+    }
+
+    &__tag {
+        font-size: 14px;
+        line-height: math.div(16, 14);
+        font-weight: 500;
+        @include fontRaleway;
+        color: var(--blue);
+        padding: 7px 18px;
+
+        background-color: #eaeefa;
+        border-radius: 29px;
+
+        @media (max-width:$smallTablet-max) {
+            border-radius: 16px;
+            font-size: 13px;
+        }
+    }
+
+    @media (min-width:$smallTablet-min) {
+        &:hover {
+            .card__image {
+                img {
+                    transform: scale(1.01);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+.banner {
+    background: linear-gradient(274.56deg, #8ABEED -17.36%, #59A2E4 91.98%);
+    border-radius: 18px;
+    padding: 24px 40px 37px;
+    color: var(--white);
+    position: relative;
+
+    &__important {
+        border: 3px solid var(--white);
+        background-color: #F26445;
+        width: 18px;
+        height: 18px;
+        box-sizing: content-box;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        transform: translate(30%, -30%);
+
+        @media (max-width:$tablet-max) {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    &__icon {
+        width: 56px;
+        height: 56px;
+        background-color: #298BE2;
+        border-radius: 14px;
+
+        @include flex-all-center;
+
+        svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--white);
+            stroke-width: 2px;
+            fill: none;
+        }
+
+        @media (max-width:$tablet-max) {
+            width: 48px;
+            height: 48px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                border-radius: 12px;
+            }
+        }
+    }
+
+    &__time {
+        margin-top: 33px;
+        display: block;
+        font-size: 18px;
+        line-height: math.div(25, 18);
+        font-weight: 500;
+
+        @media (max-width:$tablet-max) {
+            font-size: 14px;
+            margin-top: 16px;
+        }
+    }
+
+    &__descr {
+        font-size: 18px;
+        line-height: math.div(25, 18);
+        font-weight: 500;
+        display: inline-block;
+
+        @media (max-width:$tablet-max) {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width:$tablet-max) {
+        border-radius: 12px;
+        padding: 24px;
+    }
+}

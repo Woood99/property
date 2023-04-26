@@ -1,0 +1,23 @@
+.object-report {
+    padding: 56px 109px;
+    background-color: #f9f9fb;
+    border-radius: 24px;
+
+    &__select {
+        margin-bottom: 14px;
+
+        .choices {
+            border: 1px solid #dadce5;
+            height: 41px;
+        }
+
+        .choices__list--dropdown {
+            border: 1px solid #dadce5 !important; // need hack :((
+        }
+    }
+
+    @media (max-width:$tablet-max) {
+        padding: 24px 24px 40px;
+        border-radius: 16px;
+    }
+}

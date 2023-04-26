@@ -87,3 +87,11 @@
         #{$property}: calc(#{$minSizeValue} + #{$addSize} * (((100vw - #{$widthTo + rem})) / ((#{$maxWidth - $widthTo}))));
     }
 }
+
+
+
+@mixin flex-all-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

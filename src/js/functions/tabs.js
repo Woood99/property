@@ -74,9 +74,8 @@ const tabs = () => {
         let tabsContent = tabsBlock.querySelectorAll('[data-tabs-body]>*');
         const tabsBlockIndex = tabsBlock.dataset.tabsIndex;
         const tabsActiveHashBlock = tabsActiveHash[0] == tabsBlockIndex;
-
+        const tabsActiveTitle = tabsBlock.querySelector('[data-tabs-titles]>._tab-active');
         if (tabsActiveHashBlock) {
-            const tabsActiveTitle = tabsBlock.querySelector('[data-tabs-titles]>._tab-active');
             tabsActiveTitle ? tabsActiveTitle.classList.remove('_tab-active') : null;
         }
         if (tabsContent.length) {
@@ -92,6 +91,12 @@ const tabs = () => {
                 tabsContentItem.hidden = !tabsTitles[index].classList.contains('_tab-active');
             });
         }
+        const line = tabsBlock.querySelector('.line');
+        line.style.width = tabsActiveTitle.offsetWidth + 'px';
+        line.style.left = tabsActiveTitle.offsetLeft + 'px';
+        setTimeout(() => {
+            line.classList.add('_init');
+        }, 0);
     }
 
     function setTabsStatus(tabsBlock) {
@@ -141,6 +146,10 @@ const tabs = () => {
                 tabActiveTitle.length ? tabActiveTitle[0].classList.remove('_tab-active') : null;
                 tabTitle.classList.add('_tab-active');
                 setTabsStatus(tabsBlock);
+
+                const line = e.target.closest('.tabs__navigation').querySelector('.line');
+                line.style.width = e.target.offsetWidth + 'px';
+                line.style.left = e.target.offsetLeft + 'px';
             }
             e.preventDefault();
         }

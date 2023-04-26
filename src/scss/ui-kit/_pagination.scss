@@ -1,0 +1,102 @@
+.pagination {
+    --size-item: 40px;
+    display: flex;
+    align-items: center;
+
+    &__arrow {
+        min-width: var(--size-item);
+        height: var(--size-item);
+        border: 1px solid #dadce5;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all $transitionSpeed $transitionFunction;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: #292D32;
+            transition: fill $transitionSpeed $transitionFunction;
+        }
+
+        &:hover,
+        &:focus {
+            svg {
+                fill: var(--blue);
+            }
+        }
+
+        &[disabled] {
+            cursor: default;
+            pointer-events: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &--prev {
+            border-radius: 8px 0 0 8px;
+        }
+
+        &--next {
+            border-radius: 0 8px 8px 0;
+            border-left: none;
+
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+
+    &__list {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__item {
+        min-width: var(--size-item);
+        height: var(--size-item);
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #dadce5;
+        border-left: none;
+        font-size: 14px;
+        line-height: math.div(20, 14);
+        color: #292D32;
+        transition: all $transitionSpeed $transitionFunction;
+
+        a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 9.5px;
+        }
+
+        &[disabled] {
+            background-color: var(--blue);
+            color: var(--white);
+            cursor: default;
+            pointer-events: none;
+        }
+
+        &.dots {
+            background-color: transparent;
+            cursor: default;
+            pointer-events: none;
+
+        }
+
+        &:hover,
+        &:focus {
+            color: var(--blue);
+        }
+    }
+}

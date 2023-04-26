@@ -16,8 +16,8 @@ const requestPopup = new popup();
 
 
 // Табы
-// import tabs from "./functions/tabs";
-// tabs();
+import tabs from "./functions/tabs";
+tabs();
 
 
 
@@ -84,15 +84,9 @@ const requestFormRules = [{
 ];
 
 
-const afterForm = () => {
-    console.log('Произошла отправка');
-};
-if (document.querySelector('.feedback-form')) {
-    validateForms('.feedback-form', feedbackFormRules, afterForm);
-}
-if (document.querySelector('.request__body')) {
-    validateForms('.request__body', requestFormRules, afterForm);
-}
+const afterForm = () => console.log('Произошла отправка');
+if (document.querySelector('.feedback-form')) validateForms('.feedback-form', feedbackFormRules, afterForm);
+if (document.querySelector('.request__body')) validateForms('.request__body', requestFormRules, afterForm);
 
 
 
