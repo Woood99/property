@@ -31,8 +31,14 @@
     }
 
     &__logo {
+        font-size: 18px;
+        line-height: math.div(17, 18);
+        font-weight: 700;
+        color: #212121;
+        white-space: nowrap;
+
         @media (max-width:$mobile-max) {
-            width: 100px;
+            font-size: 16px;
         }
     }
 
@@ -48,10 +54,11 @@
         @media (max-width:$desktop) {
             gap: 25px;
         }
-        @media (max-width:$smallTablet-max){
-             .header__btn{
+
+        @media (max-width:$smallTablet-max) {
+            .header__btn {
                 display: none;
-             }
+            }
         }
     }
 
