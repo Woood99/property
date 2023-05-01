@@ -1,22 +1,23 @@
-.about {
-    margin-top: 45px;
+.news-page {
+    margin: 56px 0;
 
-    &__title {}
+    &__time {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: math.div(22, 16);
+        display: block;
 
-    .container {
         @media (max-width:$tablet-max) {
-            padding: 0;
+            font-size: 14px;
         }
     }
 
     &__content {
-        margin-top: 32px;
-        background-color: #F9F9fb;
-        border-radius: 24px;
-        padding: 56px 109px;
+        margin-top: 56px;
+
         color: #292D32;
         font-size: 16px;
-        line-height: math.div(25, 16);
+        line-height: math.div(26, 16);
 
         p {
             &:not(:last-child) {
@@ -96,13 +97,11 @@
 
         @media (max-width:$tablet-max) {
             margin-top: 24px;
-            padding: 32px;
-            border-radius: 16px;
-        }
-
-        @media (max-width:$smallTablet-max) {
             font-size: 13px;
-            padding: 32px 24px;
         }
+    }
+
+    @media (max-width:$tablet-max) {
+        margin: 40px 0;
     }
 }
