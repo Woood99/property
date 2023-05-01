@@ -4294,4 +4294,59 @@ textarea.input-reset {
     border-radius: 16px;
   }
 }
+
+.hero-about {
+  margin-top: 32px;
+}
+@media (max-width: 1024px) {
+  .hero-about .container {
+    padding: 0;
+  }
+}
+.hero-about__content {
+  margin-top: 32px;
+  background-color: #F9F9fb;
+  border-radius: 24px;
+  padding: 56px 109px;
+  color: #292D32;
+  font-size: 16px;
+  line-height: 1.4375;
+}
+.hero-about__content p:not(:last-child) {
+  margin-bottom: 22px;
+}
+@media (max-width: 768px) {
+  .hero-about__content p:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+.hero-about__content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.hero-about__content ul:not(:last-child) {
+  margin-bottom: 22px;
+}
+@media (max-width: 768px) {
+  .hero-about__content ul:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+.hero-about__content ul li:not(:last-child) {
+  margin-bottom: 6px;
+}
+@media (max-width: 1024px) {
+  .hero-about__content {
+    margin-top: 24px;
+    padding: 32px;
+    border-radius: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-about__content {
+    font-size: 14px;
+    padding: 32px 24px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
