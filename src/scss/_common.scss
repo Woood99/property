@@ -46,7 +46,7 @@
 .text-32 {
     @include adaptiveValue("font-size", 32, 18);
     line-height: math.div(42, 32);
-    font-weight: 600;
+    font-weight: 500;
     @include fontRaleway;
     color: var(--dark);
 

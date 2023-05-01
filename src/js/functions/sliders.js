@@ -23,7 +23,7 @@ function initSliders() {
             observer: true,
             observeParents: true,
             slidesPerView: 1.2,
-            spaceBetween: 12,
+            spaceBetween: 16,
             speed: 800,
             navigation: {
                 prevEl: document.querySelector('.news-home .navigation-primary__arrow-prev'),

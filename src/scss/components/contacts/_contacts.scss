@@ -1,4 +1,4 @@
-.hero-contacts {
+.contacts {
     margin-top: 36px;
     margin-bottom: 72px;
 
@@ -83,7 +83,7 @@
     }
 }
 
-.hero-contacts-item {
+.contacts-item {
     padding: 42px 56px;
     background-color: #F9F9FB;
     border-radius: 20px;
@@ -187,7 +187,7 @@
     &--tel {
         @media (min-width:$smallTablet-min) {
             &:hover {
-                .hero-contacts-item {
+                .contacts-item {
                     &__content {
                         color: var(--blue);
                     }
@@ -199,7 +199,7 @@
     &--email {
         @media (min-width:$smallTablet-min) {
             &:hover {
-                .hero-contacts-item {
+                .contacts-item {
                     &__content {
                         color: var(--blue);
                     }
@@ -207,14 +207,14 @@
             }
         }
 
-        .hero-contacts-item__content {
+        .contacts-item__content {
             text-decoration: underline;
             text-decoration-skip-ink: none;
         }
     }
 
     &--hour {
-        .hero-contacts-item {
+        .contacts-item {
             &__content {
                 display: flex;
                 align-items: end;
@@ -235,7 +235,7 @@
         @media (min-width:$tablet-min) {
             grid-template-columns: 1fr max-content;
 
-            .hero-contacts-item {
+            .contacts-item {
                 &__subtitle {
                     grid-row: 1/2;
                 }
@@ -265,7 +265,7 @@
         @media (max-width:$smallTablet-max) {
             justify-content: center;
 
-            .hero-contacts-item__content {
+            .contacts-item__content {
                 margin: 0 auto;
             }
         }
