@@ -47,7 +47,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // Модальное окно
 
-const requestPopup = new _functions_popup__WEBPACK_IMPORTED_MODULE_1__["default"]();
+const modals = new _functions_popup__WEBPACK_IMPORTED_MODULE_1__["default"]();
 
 // ========================================================================================
 

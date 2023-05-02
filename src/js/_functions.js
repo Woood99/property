@@ -10,7 +10,7 @@ burgerMenu();
 
 // Модальное окно
 import popup from './functions/popup'
-const requestPopup = new popup();
+const modals = new popup();
 
 // ========================================================================================
 
