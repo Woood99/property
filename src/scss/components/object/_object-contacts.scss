@@ -3,11 +3,10 @@
         color: var(--dark);
         font-size: 24px;
         line-height: math.div(31, 24);
-        font-weight: 600;
+        font-weight: 500;
 
         @media (max-width:$tablet-max) {
             font-size: 18px;
-            font-weight: 500;
         }
     }
 
@@ -107,7 +106,7 @@
             color: inherit;
             font-size: 14px;
             line-height: math.div(19, 14);
-            font-weight: 600;
+            font-weight: 500;
         }
 
         @media (max-width:$tablet-max) {
@@ -170,7 +169,7 @@
                 color: #292D32;
                 font-size: 16px;
                 line-height: math.div(23, 16);
-                font-weight: 500;
+                font-weight: 400;
 
                 &:nth-child(2) {
                     text-align: left;
@@ -223,7 +222,7 @@
                 color: #292D32;
                 font-size: 16px;
                 line-height: math.div(22, 16);
-                font-weight: 600;
+                font-weight: 400;
                 margin-left: 16px;
 
                 @media (max-width:$tablet-max) {
@@ -263,7 +262,7 @@
         color: #292D32;
         font-size: 16px;
         line-height: 23px;
-        font-weight: 500;
+        font-weight: 400;
         transition: color $transitionSpeed $transitionFunction;
 
         &:hover {
@@ -272,7 +271,6 @@
 
         @media (max-width:$tablet-max) {
             font-size: 14px;
-            font-weight: 400;
         }
     }
 
@@ -280,12 +278,11 @@
         display: inline-block;
         color: #292D32;
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 400;
         line-height: math.div(23, 16);
 
         @media (max-width:$tablet-max) {
             font-size: 14px;
-            font-weight: 400;
         }
     }
 }

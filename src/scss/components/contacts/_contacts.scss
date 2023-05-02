@@ -1,5 +1,5 @@
 .contacts {
-    margin-top: 36px;
+    margin-top: 32px;
     margin-bottom: 72px;
 
     &__title {
@@ -78,7 +78,6 @@
     }
 
     @media (max-width:$tablet-max) {
-        margin-top: 32px;
         margin-bottom: 32px;
     }
 }
