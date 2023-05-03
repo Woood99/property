@@ -139,7 +139,7 @@
             color: #1F1F1F;
             font-size: 16px;
             line-height: math.div(20, 16);
-            font-weight: 600;
+            font-weight: 500;
             margin-left: 18px;
         }
 
@@ -222,7 +222,7 @@
                 color: #292D32;
                 font-size: 16px;
                 line-height: math.div(22, 16);
-                font-weight: 400;
+                font-weight: 500;
                 margin-left: 16px;
 
                 @media (max-width:$tablet-max) {
