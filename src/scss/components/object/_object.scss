@@ -98,4 +98,20 @@
             margin-top: 40px;
         }
     }
+
+    &__top--no-banner {
+        display: block;
+
+        .object__image {
+            padding-bottom: percent(200, 1296);
+
+            @media (max-width:$tablet-max) {
+                padding-bottom: percent(250, 848);
+            }
+
+            @media (max-width:$smallTablet-max) {
+                padding-bottom: percent(300, 848);
+            }
+        }
+    }
 }

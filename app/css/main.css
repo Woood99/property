@@ -555,7 +555,7 @@ textarea.input-reset {
   left: 0;
   width: 0;
   height: 2px;
-  z-index: 10;
+  z-index: var(--index-3);
   background-color: var(--blue);
   border-radius: 4px;
 }
@@ -2132,15 +2132,16 @@ textarea.input-reset {
   }
 }
 .header__logo {
-  font-size: 18px;
-  line-height: 0.9444444444;
-  font-weight: 700;
-  color: #212121;
-  white-space: nowrap;
+  width: 125px;
 }
-@media (max-width: 576px) {
+@media (max-width: 1024px) {
   .header__logo {
-    font-size: 16px;
+    width: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .header__logo {
+    width: 75px;
   }
 }
 .header__nav {
@@ -3326,6 +3327,7 @@ textarea.input-reset {
   }
 }
 .feedback-home__image {
+  max-width: 521px;
   position: absolute;
   bottom: -45px;
   left: -50px;
@@ -4035,6 +4037,22 @@ textarea.input-reset {
 @media (max-width: 1024px) {
   .object__tabs {
     margin-top: 40px;
+  }
+}
+.object__top--no-banner {
+  display: block;
+}
+.object__top--no-banner .object__image {
+  padding-bottom: 15.4320987654%;
+}
+@media (max-width: 1024px) {
+  .object__top--no-banner .object__image {
+    padding-bottom: 29.4811320755%;
+  }
+}
+@media (max-width: 768px) {
+  .object__top--no-banner .object__image {
+    padding-bottom: 35.3773584906%;
   }
 }
 

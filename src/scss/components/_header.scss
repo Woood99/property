@@ -31,14 +31,14 @@
     }
 
     &__logo {
-        font-size: 18px;
-        line-height: math.div(17, 18);
-        font-weight: 700;
-        color: #212121;
-        white-space: nowrap;
+        width: 125px;
 
-        @media (max-width:$mobile-max) {
-            font-size: 16px;
+        @media (max-width:$tablet-max) {
+            width: 100px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            width: 75px;
         }
     }
 

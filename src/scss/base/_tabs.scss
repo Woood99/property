@@ -80,7 +80,7 @@
         left: 0;
         width: 0;
         height: 2px;
-        z-index: 10;
+        z-index: var(--index-3);
         background-color: var(--blue);
         border-radius: 4px;
 
