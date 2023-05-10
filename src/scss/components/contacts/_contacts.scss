@@ -74,7 +74,11 @@
     }
 
     &__props {
-        @include adaptiveValue("margin-top", 361, 75, 1296, 568, 1);
+        margin-top: 56px;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 32px;
+        }
     }
 
     @media (max-width:$tablet-max) {

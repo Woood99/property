@@ -2132,7 +2132,7 @@ textarea.input-reset {
   }
 }
 .header__logo {
-  width: 125px;
+  width: 110px;
 }
 @media (max-width: 1024px) {
   .header__logo {
@@ -3433,19 +3433,12 @@ textarea.input-reset {
     height: 80px;
   }
 }
-@media (min-width: 81em) {
-  .contacts__props {
-    margin-top: 22.5625rem;
-  }
+.contacts__props {
+  margin-top: 56px;
 }
-@media (min-width: 35.5em) and (max-width: 81em) {
+@media (max-width: 1024px) {
   .contacts__props {
-    margin-top: calc(4.6875rem + 17.875 * (((100vw - 35.5rem)) / ((45.5))));
-  }
-}
-@media (max-width: 35.5em) {
-  .contacts__props {
-    margin-top: 4.6875rem;
+    margin-top: 32px;
   }
 }
 @media (max-width: 1024px) {
