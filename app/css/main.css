@@ -3679,6 +3679,7 @@ textarea.input-reset {
 }
 .useful-home__container {
   background-color: #F9F9FB;
+  background-color: red;
   border-radius: 64px;
   padding: 90px 0;
   display: -ms-grid;
@@ -3687,6 +3688,7 @@ textarea.input-reset {
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 24px;
   position: relative;
+  overflow: hidden;
 }
 @media (max-width: 1024px) {
   .useful-home__container {
