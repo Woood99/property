@@ -10,8 +10,8 @@
     &__item {
         white-space: nowrap;
         padding: 0 24px;
-        font-size: 16px;
-        line-height: math.div(20, 16);
+        font-size: 14px;
+        line-height: math.div(18, 14);
         color: var(--dark);
         font-weight: 500;
 
@@ -24,8 +24,8 @@
 
             &::after {
                 content: '';
-                width: 24px;
-                height: 24px;
+                width: 22px;
+                height: 22px;
                 background-image: url('../img/arrow-right.svg');
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -35,8 +35,8 @@
                 left: 0;
 
                 @media (max-width:$smallTablet-max) {
-                    width: 21px;
-                    height: 21px;
+                    width: 18px;
+                    height: 18px;
                 }
             }
         }

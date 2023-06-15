@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+"title": "М-Проперти"
+})
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header-two.html')
+        <main class="main">
+            @include('partials/home/hero-home-two.html')
+            @include('partials/home/about-home.html')
+            @include('partials/home/contacts-home.html')
+            @include('partials/home/app-info-home.html')
+            @include('partials/home/news-home.html')
+            @include('partials/home/feedback-home.html')
+        </main>
+        @include('partials/footer.html')
+    </div>
+    @include('partials/popup.html')
+</body>
+
+
+</html>

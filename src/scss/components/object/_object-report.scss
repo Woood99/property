@@ -1,5 +1,5 @@
 .object-report {
-    padding: 56px 109px;
+    padding: 42px 56px;
     background-color: #f9f9fb;
     border-radius: 24px;
 
@@ -17,7 +17,7 @@
     }
 
     @media (max-width:$tablet-max) {
-        padding: 24px 24px 40px;
+        padding: 24px;
         border-radius: 16px;
     }
 }

@@ -44,9 +44,9 @@
                     </svg>
                     <span>+7 499 444-70-85</span>
                 </a>
-                <button type="button" class="btn btn-reset btn-secondary header__btn" data-da=".header__nav,768,3">
+                <a href="#" class="btn btn-reset btn-secondary header__btn" data-da=".header__nav,768,3">
                     Личный кабинет
-                </button>
+                </a>
             </div>
             <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
                 <span></span>
@@ -208,15 +208,22 @@
                             </a>
                             <a href="#" class="swiper-slide">
                                 <picture>
-                                    <source srcset="./img/gallery-2.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery-2.jpg" width="550" height="320"
+                                    <source srcset="./img/gallery-4.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/gallery-4.jpg" width="550" height="320"
                                         alt="Картинка">
                                 </picture>
                             </a>
                             <a href="#" class="swiper-slide">
                                 <picture>
-                                    <source srcset="./img/gallery-3.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery-3.jpg" width="550" height="320"
+                                    <source srcset="./img/gallery-5.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/gallery-5.jpg" width="550" height="320"
+                                        alt="Картинка">
+                                </picture>
+                            </a>
+                            <a href="#" class="swiper-slide">
+                                <picture>
+                                    <source srcset="./img/gallery-6.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/gallery-6.jpg" width="550" height="320"
                                         alt="Картинка">
                                 </picture>
                             </a>
@@ -253,20 +260,7 @@
                         Подробнее →
                     </a>
                 </div>
-                <div class="contacts-home__navigation navigation-primary">
-                    <button type="button"
-                        class="btn btn-reset navigation-primary__arrow navigation-primary__arrow-prev">
-                        <svg>
-                            <use xlink:href="img/sprite.svg#circle-arrow"></use>
-                        </svg>
-                    </button>
-                    <button type="button"
-                        class="btn btn-reset navigation-primary__arrow navigation-primary__arrow-next">
-                        <svg>
-                            <use xlink:href="img/sprite.svg#circle-arrow"></use>
-                        </svg>
-                    </button>
-                </div>
+                <div class="contacts-home__pagination"></div>
             </div>
             <h2 class="contacts-home__title text-32">
                 Нам <span>доверяют</span> известные ЖК,
@@ -309,6 +303,77 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+            <section class="useful-home">
+    <div class="container">
+        <div class="useful-home__container">
+            <h2 class="useful-home__title text-32">
+                Полезные <span>сервисы и услуги</span> <br>
+                на особых условиях от проверенных партнёров
+            </h2>
+            <div class="useful-home__items">
+                <button type="button" class="useful-home__item btn btn-reset video-primary">
+                    <video class="video-primary__body" autoplay muted loop>
+                        <source src="video.webm" type="video/webm">
+                    </video>
+                    <div class="video-primary__btn">
+                        <svg class="video-primary__btn--stop">
+                            <use xlink:href="img/sprite.svg#play"></use>
+                        </svg>
+                        <svg class="video-primary__btn--play">
+                            <use xlink:href="img/sprite.svg#play-two"></use>
+                        </svg>
+                    </div>
+                    <span class="video-primary__subtitle">
+                        Клининг
+                    </span>
+                </button>
+                <a href="#" class="useful-home__item useful-home__item--row-1">
+                    <picture>
+                        <source srcset="./img/useful-2.webp" type="image/webp">
+                        <img loading="lazy" src="./img/useful-2.jpg" alt="Ремонт
+                          под ключ">
+                    </picture>
+                    <span>
+                        Ремонт
+                        под ключ
+                    </span>
+                </a>
+                <a href="#" class="useful-home__item useful-home__item--row-1">
+                    <picture>
+                        <source srcset="./img/useful-3.webp" type="image/webp">
+                        <img loading="lazy" src="./img/useful-3.jpg" alt="Согласование
+                        перепланировки">
+                    </picture>
+                    <span>
+                        Согласование
+                        перепланировки
+                    </span>
+                </a>
+                <a href="#" class="useful-home__item useful-home__item--row-2">
+                    <picture>
+                        <source srcset="./img/useful-4.webp" type="image/webp">
+                        <img loading="lazy" src="./img/useful-4.jpg" alt="Цветы
+                        по подписке">
+                    </picture>
+                    <span>
+                        Цветы
+                        по подписке
+                    </span>
+                </a>
+                <a href="#" class="useful-home__item useful-home__item--row-2">
+                    <span>
+                        Посмотреть все
+                        предложения
+                    </span>
+                </a>
+            </div>
+            <h3 class="useful-home__subtitle">
+                Если вы остались недовольны качеством предоставляемой <br> услуги — сообщите нам об этом
+            </h3>
         </div>
     </div>
 </section>
@@ -463,10 +528,12 @@
         <div class="footer__top">
             <div class="footer__left">
                 <div class="footer__col footer-info">
-                    <h3 class="footer-info__title">
-                        О компании
-                    </h3>
                     <ul class="footer-info__list list-reset">
+                        <li class="footer-info__item">
+                            <a href="#" class="footer-info__link">
+                                О компании
+                            </a>
+                        </li>
                         <li class="footer-info__item">
                             <a href="#" class="footer-info__link">
                                 Раскрытие <br>
@@ -476,10 +543,12 @@
                     </ul>
                 </div>
                 <div class="footer__col footer-info">
-                    <h3 class="footer-info__title">
-                        Личный кабинет
-                    </h3>
                     <ul class="footer-info__list list-reset">
+                        <li class="footer-info__item">
+                            <a href="#" class="footer-info__link">
+                                Личный кабинет
+                            </a>
+                        </li>
                         <li class="footer-info__item">
                             <a href="#" class="footer-info__link">
                                 Новости
@@ -500,8 +569,8 @@
                     </h3>
                     <ul class="footer-contacts__list list-reset">
                         <li class="footer-contacts__item">
-                            <a href="tel:+74955131375" class="footer-contacts__link">
-                                +7 495 513-13-75
+                            <a href="tel:79670000068" class="footer-contacts__link">
+                                +7 (967) 000-00-68
                             </a>
                         </li>
                     </ul>
@@ -512,11 +581,15 @@
                     </h3>
                     <ul class="footer-contacts__list list-reset">
                         <li class="footer-contacts__item">
-                            <a href="mailto:info@mproperty.ru" class="footer-contacts__link">
-                                info@mproperty.ru
+                            <a href="mailto:prodom.services.tech@gmail.com" class="footer-contacts__link">
+                                prodom.services.tech@gmail.com
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div class="footer__col footer-pos">
+                    <span>Руководитель:</span>
+                    <span>Тимошин Алексей Викторович</span>
                 </div>
                 <div class="footer__col footer-contacts footer-contacts--address">
                     <h3 class="footer-contacts__title">
@@ -524,14 +597,9 @@
                     </h3>
                     <ul class="footer-contacts__list list-reset">
                         <li class="footer-contacts__item">
-                            г. Москва,
-                            ул. Селезневская, дом 19/2
+                            129515, город Москва, ул Академика Королева, д. 13 стр. 1, помещ. 25/38
                         </li>
                     </ul>
-                </div>
-                <div class="footer__col footer-pos">
-                    <span>Руководитель:</span>
-                    <span>Тимошин Алексей Викторович</span>
                 </div>
             </div>
         </div>

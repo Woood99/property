@@ -1,10 +1,10 @@
 .object-info {
-    padding: 70px 110px;
+    padding: 42px 56px;
     background-color: #F9F9FB;
     border-radius: 24px;
 
     @media (max-width:$tablet-max) {
-        padding: 24px 24px 40px;
+        padding: 24px;
         border-radius: 16px;
     }
 }

@@ -43,11 +43,14 @@
         align-items: center;
         justify-content: center;
         grid-column: 1/-1;
-        transition: border-radius $transitionSpeed $transitionFunction;
 
         @media (min-width:$smallTablet-min) {
             &:hover {
-                border-radius: 78px;
+                box-shadow: 0px 56px 22px rgba(55, 82, 215, 0.01), 
+                0px 32px 19px rgba(55, 82, 215, 0.05), 
+                0px 14px 14px rgba(55, 82, 215, 0.09), 
+                0px 4px 8px rgba(55, 82, 215, 0.1), 
+                0px 0px 0px rgba(55, 82, 215, 0.1);
             }
         }
 
@@ -158,6 +161,7 @@
     }
 
     &__location {
+        position: relative;
         text-align: center;
         font-size: 10px;
         line-height: math.div(22, 10);
@@ -169,7 +173,18 @@
         img {
             border-radius: 20px;
         }
+        >img:nth-child(2) {
+            width: 32px;
+            height: 32px;
 
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            border-radius: 0;
+            object-fit: contain;
+
+            transition: top $transitionSpeed $transitionFunction;
+        }
         @media (max-width:$tablet-max) {
             margin-top: 16px;
             display: inline-flex;
@@ -246,6 +261,13 @@
                 &__content {
                     grid-row: 1/4;
                     grid-column: 2/3;
+                }
+            }
+            &:hover {
+                .contacts-item__location{
+                    >img:nth-child(2) {
+                        top: -16px;
+                    }
                 }
             }
         }
@@ -341,7 +363,7 @@
         span {
             font-size: 16px;
             line-height: math.div(26, 16);
-            font-weight: 500;
+            font-weight: 400;
 
             &:nth-child(2) {
                 letter-spacing: 0.04em;

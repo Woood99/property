@@ -10,8 +10,11 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_getHeightBlock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/getHeightBlock */ "./src/js/modules/getHeightBlock.js");
+/* harmony import */ var _components_video_primary__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/video-primary */ "./src/js/components/video-primary.js");
+
 
 document.addEventListener('DOMContentLoaded', () => {
+  (0,_components_video_primary__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_modules_getHeightBlock__WEBPACK_IMPORTED_MODULE_0__["default"])('.header', '--header-height');
   window.addEventListener('resize', () => {
     (0,_modules_getHeightBlock__WEBPACK_IMPORTED_MODULE_0__["default"])('.header', '--header-height');
@@ -201,6 +204,52 @@ if (selectPrimary.length >= 1) {
     });
   });
 }
+const selectSearch = document.querySelectorAll('.select-search__body');
+if (selectSearch.length >= 1) {
+  selectSearch.forEach(el => {
+    const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_0___default())(el, {
+      renderChoiceLimit: 3,
+      searchPlaceholderValue: '',
+      itemSelectText: '',
+      position: 'bottom',
+      noResultsText: 'Ничего не найдено'
+    });
+    el.addEventListener('showDropdown', () => {
+      const input = el.closest('.select-search').querySelector('.choices__list--dropdown .choices__input');
+      setTimeout(() => input.focus(), 400);
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js/components/video-primary.js":
+/*!********************************************!*\
+  !*** ./src/js/components/video-primary.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const videoPrimary = () => {
+  const videos = document.querySelectorAll('.video-primary');
+  videos.forEach(video => {
+    const videoBody = video.querySelector('.video-primary__body');
+    video.addEventListener('click', e => {
+      if (videoBody.paused) {
+        videoBody.play();
+        video.classList.remove('_pause');
+      } else {
+        videoBody.pause();
+        video.classList.add('_pause');
+      }
+    });
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (videoPrimary);
 
 /***/ }),
 
@@ -606,7 +655,7 @@ __webpack_require__.r(__webpack_exports__);
 // =========================================================================================
 
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectCreative]);
 
 // =========================================================================================
 
@@ -632,14 +681,32 @@ function initSliders() {
   }
   if (document.querySelector('.gallery-slider')) {
     new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.gallery-slider', {
+      effect: "creative",
       observer: true,
       observeParents: true,
       slidesPerView: 1,
       spaceBetween: 12,
-      speed: 800,
-      navigation: {
-        prevEl: document.querySelector('.contacts-home .navigation-primary__arrow-prev'),
-        nextEl: document.querySelector('.contacts-home .navigation-primary__arrow-next')
+      speed: 450,
+      autoplay: {
+        delay: 6000
+      },
+      allowTouchMove: false,
+      creativeEffect: {
+        prev: {
+          shadow: true,
+          translate: ["-20%", 0, -1]
+        },
+        next: {
+          translate: ["100%", 0, 0]
+        }
+      },
+      pagination: {
+        el: document.querySelector('.contacts-home .contacts-home__pagination'),
+        clickable: true,
+        bulletActiveClass: "active",
+        renderBullet: function (index, className) {
+          return "<div class='swiper-thumbnail ".concat(className, "'>\n  <img src='").concat(this.slides[index].querySelector('img').src, "' alt='Thumbnail'>\n </div>");
+        }
       }
     });
   }

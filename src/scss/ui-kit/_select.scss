@@ -100,3 +100,115 @@
         }
     }
 }
+
+.select-search {
+    position: relative;
+    height: 48px;
+
+    .choices {
+        background-color: var(--white);
+        overflow: visible;
+        overflow: 0;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px #495aff03, 0 0 #495aff03, 0 32px 19px #495aff03, 0 14px 14px #495aff03, 0 4px 8px #495aff03, 0 0 #495aff03;
+        transition: border-radius $transitionSpeed $transitionFunction;
+        height: 48px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border: 1px solid transparent;
+
+        .choices__input {
+            border-bottom: none;
+            padding: 7px 20px;
+        }
+
+        &::after {
+            display: none;
+        }
+
+        &.is-open {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+    }
+
+    .choices__list--dropdown {
+        margin-top: 0;
+        left: -1px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        z-index: 5;
+        border: 1px solid transparent !important; // Hack! need to be redefined choices
+        transition: visibility $transitionSpeed $transitionFunction,
+            opacity $transitionSpeed $transitionFunction,
+            transform $transitionSpeed $transitionFunction;
+        opacity: 0;
+        transform: translateY(10px);
+        width: calc(100% + 2px);
+
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .choices__item {
+            font-size: 14px;
+            line-height: math.div(16, 13);
+            padding: 7px 20px;
+
+            &.is-selected {
+                opacity: 0.45;
+                pointer-events: none;
+            }
+
+            &.choices__placeholder {
+                display: none;
+            }
+        }
+
+        @media (max-width:$smallTablet-max) {
+            left: -0.5px;
+        }
+    }
+
+    .choices__inner {
+        padding: 0 !important; // Hack! need to be redefined choices
+        background-color: transparent;
+        border-radius: 0;
+        border: none;
+        min-height: auto;
+        line-height: 0;
+    }
+
+    .choices__list--single {
+        padding: 0;
+        font-size: 14px;
+        line-height: math.div(22, 14);
+
+        width: calc(100% - 30px);
+
+        >.choices__item--selectable {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+
+        svg {
+            width: 17px;
+            height: 17px;
+            stroke: var(--dark);
+            stroke-width: 2px;
+            fill: none;
+        }
+    }
+}

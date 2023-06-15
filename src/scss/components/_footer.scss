@@ -29,19 +29,25 @@
     &__col {}
 
     &__right {
+        margin-left: 24px;
         display: grid;
-        grid-template-columns: repeat(3, 150px);
-        @include adaptiveValue("grid-column-gap", 72, 40);
+        grid-template-columns: repeat(2, 250px);
+        @include adaptiveValue("grid-column-gap", 72, 32);
         grid-row-gap: 20px;
 
         @media (max-width:$tablet-max) {
+            margin-left: 0;
             margin-top: 50px;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             grid-row-gap: 40px;
         }
 
         @media (max-width:$smallTablet-max) {
             grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width:$mobile-max) {
+            grid-template-columns: 1fr;
         }
     }
 
@@ -145,8 +151,6 @@
 }
 
 .footer-pos {
-    grid-column: 1/-1;
-
     display: flex;
     flex-direction: column;
 }

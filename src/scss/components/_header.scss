@@ -125,6 +125,63 @@
         }
     }
 
+    &--two {
+        .header {
+            &__logo {
+                width: auto;
+                display: flex;
+                align-items: center;
+                margin-right: 16px;
+
+                img {
+                    max-width: 50px;
+                }
+
+                span {
+                    font-size: 14px;
+                    line-height: math.div(18, 14);
+                    font-weight: 500;
+
+                    &:not(:first-child) {
+                        margin-left: 16px;
+
+                        @media (max-width:$tablet-max) {
+                            margin-left: 8px;
+                        }
+                    }
+
+                    @media (max-width:$mobile-max) {
+                        font-size: 12px;
+                    }
+
+                    @media (max-width:340px) {
+                        font-size: 10px;
+                    }
+                }
+
+                &--img {
+                    img {
+                        width: 35px;
+                    }
+                }
+
+                &--text {
+                    span {
+                        font-size: 16px;
+
+                        @media (max-width:$mobile-max) {
+                            font-size: 14px;
+                        }
+
+                        @media (max-width:340px) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     @media (max-width:$tablet-max) {
         margin-top: 0;
         position: fixed;

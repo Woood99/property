@@ -57,3 +57,19 @@ if (selectPrimary.length >= 1) {
         })
     });
 }
+const selectSearch = document.querySelectorAll('.select-search__body');
+if (selectSearch.length >= 1) {
+    selectSearch.forEach(el => {
+        const choices = new Choices(el, {
+            renderChoiceLimit: 3,
+            searchPlaceholderValue: '',
+            itemSelectText: '',
+            position: 'bottom',
+            noResultsText: 'Ничего не найдено',
+        })
+        el.addEventListener('showDropdown', () => {
+            const input = el.closest('.select-search').querySelector('.choices__list--dropdown .choices__input');
+            setTimeout(() => input.focus(), 400);
+        })
+    });
+}

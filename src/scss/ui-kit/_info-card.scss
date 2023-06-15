@@ -44,7 +44,6 @@
 
         font-size: 18px;
         line-height: math.div(22, 18);
-        @include fontRaleway;
 
         @media (max-width:$tablet-max) {
             font-size: 16px;

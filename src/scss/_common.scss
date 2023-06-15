@@ -13,6 +13,19 @@
     padding: 7px 18px;
 }
 
+.subtitle-secondary {
+    @include fontRaleway;
+    color: var(--blue);
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 500;
+
+    background-color: #eaeefa;
+    border-radius: 29px;
+
+    padding: 7px 18px;
+}
+
 .bubble-speech {
     color: #292D32;
 
@@ -98,6 +111,6 @@
 }
 
 
-.text-center{
+.text-center {
     text-align: center;
 }
