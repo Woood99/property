@@ -74,7 +74,7 @@ textarea.input-reset {
 
         font-size: 16px;
         font-weight: 400;
-        line-height: 100%;
+        line-height: math.div(21 , 16);
 
         &::placeholder {
             color: #CCD9FF;

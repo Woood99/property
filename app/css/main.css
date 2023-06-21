@@ -331,7 +331,7 @@ textarea.input-reset {
   border-radius: 10px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 1.3125;
 }
 .label-primary__textarea::-webkit-input-placeholder {
   color: #CCD9FF;
