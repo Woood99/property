@@ -139,16 +139,36 @@
                 }
 
                 @media (max-width:$mobile-max) {
-                    background-size: 95%;
+                    height: 450px;
+                    background-size: 100%;
                 }
             }
-
+            &__content{
+                padding: 32px 16px;
+                @media (max-width:$smallTablet-max){
+                     height: 100%; 
+                }
+            }
             &__subtitle {}
 
             &__title {
-                top: 28%;
+                position: static;
+                max-width: 230px;
+                @media (max-width:$smallTablet-max){
+                     max-width: none; 
+                     margin: 0;
+                }
             }
-
+            &__text{
+                position: absolute;
+               top: 28%;
+                left: 6.8%;
+                @media (max-width:$smallTablet-max){
+                     position: static;
+                     margin: 0 auto; 
+                     flex-grow: 1;
+                }
+            }
             &__map {
                 position: absolute;
                 top: 15%;
@@ -190,23 +210,32 @@
                     }
                 }
 
-
+                @media (max-width:$tablet-max){
+                    left: auto;
+                    right: 20px;
+                    top: 20px;
+                }
                 @media (max-width:$smallTablet-max) {
                     margin-top: 24px;
                     margin-left: 0;
-                    align-self: end;
+                    align-self: center;
+                    position: static;
                 }
             }
 
             &__descr {
-                top: 68%;
-                left: 6.8%;
+                margin-top: 40px;
+                position: static;
                 max-width: 400px;
+                @media (max-width:$smallTablet-max){
+                    max-width: none; 
+                    margin-top: 24px;
+               }
             }
         }
 
         @media (max-width:$smallTablet-max) {
-            height: 500px;
+            height: 450px;
         }
     }
 }

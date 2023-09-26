@@ -41,6 +41,7 @@
 
         @media (max-width:$smallTablet-max) {
             padding: 0 32px;
+            max-height: 450px;
         }
     }
 
@@ -64,6 +65,11 @@
         @media (max-width:$tablet-max) {
             width: auto;
             height: 100%;
+            top: -48px;
+        }
+        @media (max-width:$smallTablet-max){
+           min-height: 450px;
+           top: -32px;
         }
     }
 

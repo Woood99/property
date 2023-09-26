@@ -181,11 +181,15 @@
             }
         }
     }
-    &--two{
-        .header__inner{
-        background: linear-gradient(256.7deg, rgba(3, 75, 217, 0.08) 18.57%, rgba(255, 255, 255, 0) 86.31%), #f6f6fc;
-        }
+
+    &--two {
+       @media (min-width:$tablet-min){
+        .header__inner {
+            background: linear-gradient(256.7deg, rgba(3, 75, 217, 0.08) 18.57%, rgba(255, 255, 255, 0) 86.31%), #f6f6fc;
+        } 
+       }
     }
+
     @media (max-width:$tablet-max) {
         margin-top: 0;
         position: fixed;

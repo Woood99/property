@@ -268,7 +268,133 @@
         @include('partials/header-two.html')
         <main class="main">
             @include('partials/home/hero-home-two.html')
-            @include('partials/home/about-home.html')
+            <section class="about-home">
+                <div class="about-home__container container">
+                    <ul class="about-home__top about-home-top list-reset">
+                        <li class="about-home-top__item about-home-top__item--1 info-card">
+                            <a href="#" class="info-card__wrapper">
+                                <div class="info-card__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#lamp"></use>
+                                    </svg>
+                                </div>
+                                <p class="info-card__descr">
+                                    Оплатить квитанцию <br>
+                                    или подать показания
+                                </p>
+                            </a>
+                        </li>
+                        <li class="about-home-top__item about-home-top__item--2 info-card">
+                            <a href="#" class="info-card__wrapper">
+                                <div class="info-card__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#cleaner"></use>
+                                    </svg>
+                                </div>
+                                <p class="info-card__descr">
+                                    Перейти в сервис <br>
+                                    и выбрать услугу
+                                </p>
+                            </a>
+                        </li>
+                        <li class="about-home-top__item about-home-top__item--3 info-card">
+                            <a href="#" class="info-card__wrapper">
+                                <div class="info-card__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#edit"></use>
+                                    </svg>
+                                </div>
+                                <p class="info-card__descr">
+                                    Оставить заявку <br>
+                                    по любому вопросу
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div id='js-show-iframe-wrapper' style="margin-top: 48px;">
+                        <div class='pos-banner-fluid bf-38'>
+            
+                            <div class='bf-38__decor'>
+                                <div class='bf-38__logo-wrap'>
+                                    <img class='bf-38__logo' src='https://pos.gosuslugi.ru/bin/banner-fluid/gosuslugi-logo-blue.svg' alt='Госуслуги' />
+                                    <div class='bf-38__slogan'>Решаем вместе</div>
+                                </div>
+                            </div>
+                            <div class='bf-38__content'>
+                                <div class='bf-38__description'>
+                                    <span class='bf-38__text'>
+                                        В квитанциях ошибки, в подъезде мусор, сотрудники управляющей хамят?
+                                    </span>
+                                    <span class='bf-38__text bf-38__text_small'>
+                                        Расскажите о проблемах с ЖКХ
+                                    </span>
+                                </div>
+            
+                                <div class='bf-38__bottom-wrap'>
+                                    <div class='bf-38__btn-wrap'>
+                                        <!-- pos-banner-btn_2 не удалять; другие классы не добавлять -->
+                                        <button class='pos-banner-btn_2' type='button'>Написать о проблеме
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </div>
+                    <div class="about-home__body about-home-body">
+                        <p class="about-home-body__descr text-32">
+                            Мы — управляющая компания «М-Проперти».
+                            Делаем социальную среду <span>комфортной</span>,
+                            приходим на помощь жителям и упрощаем
+                            процессы оплаты ЖКХ
+                        </p>
+                        <div class="about-home-body__info">
+                            <span>
+                                200 000+
+                            </span>
+                            <span>
+                                квадратных метров <br>
+                                обслуживаем ежедневно
+                            </span>
+                        </div>
+                    </div>
+                    <ul class="about-home__bottom about-home-bottom list-reset">
+                        <li class="about-home-bottom__item info-card-two">
+                            <div class="info-card-two__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#settings"></use>
+                                </svg>
+                            </div>
+                            <p class="info-card-two__descr">
+                                Cледим за техническим состоянием
+                                общедомового имущества и сложных инженерных систем
+                            </p>
+                        </li>
+                        <li class="about-home-bottom__item info-card-two">
+                            <div class="info-card-two__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wallet"></use>
+                                </svg>
+                            </div>
+                            <p class="info-card-two__descr">
+                                Контролируем расходы, оптимизируем бюджеты. Предоставляем финансовые
+                                отчёты — всё прозрачно
+                            </p>
+                        </li>
+                        <li class="about-home-bottom__item info-card-two">
+                            <div class="info-card-two__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#send"></use>
+                                </svg>
+                            </div>
+                            <p class="info-card-two__descr">
+                                Показываем и рассказываем о нашей работе в социальных сетях, публикуем ежемесячные отчёты. Всегда
+                                на связи с нашими жителями
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
             @include('partials/home/contacts-home.html')
             @include('partials/home/app-info-home.html')
             @include('partials/home/useful-home.html')
