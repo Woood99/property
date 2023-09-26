@@ -25,10 +25,10 @@
 
     &__left {
         max-height: 719px;
-        background-color: #EAEEFA;
+        background-color: #F9F9FB;
 
         border-radius: 64px;
-        padding: 0 85px;
+        padding: 0 35px;
         position: relative;
 
         @media (max-width:$tablet-max) {
@@ -61,7 +61,6 @@
         width: 100%;
         position: relative;
         top: -72px;
-
         @media (max-width:$tablet-max) {
             width: auto;
             height: 100%;

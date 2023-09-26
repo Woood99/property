@@ -127,7 +127,7 @@
         .hero-home {
             &__container {
                 height: 435px;
-                background: url(../img/hero-two-bg.png), linear-gradient(256.7deg, rgba(3, 75, 217, .08) 18.57%, rgba(255, 255, 255, 0) 86.31%), #f6f6fc;
+                background: url(../img/hero-two-bg.png), linear-gradient(257deg, rgba(3, 75, 217, 0.08) 18.57%, rgba(255, 255, 255, 0.00) 86.31%), #F6F6FC;
                 background-size: 40%;
                 background-repeat: no-repeat;
                 background-position: right bottom;
@@ -145,72 +145,63 @@
 
             &__subtitle {}
 
-            &__bottom {
-                display: flex;
-                align-items: end;
-
-                @media (min-width:$smallTablet-min) {
-                    position: absolute;
-                    top: 55%;
-                    left: 6.8%;
-                }
-
-                @media (max-width:$smallTablet-max) {
-                    margin-top: 24px;
-                    flex-direction: column;
-                    align-items: start;
-                }
-            }
-
-            &__search {
-                width: 465px;
-
-                @media (max-width:$smallTablet-max) {
-                    width: 100%;
-                }
+            &__title {
+                top: 28%;
             }
 
             &__map {
-                position: relative;
-                margin-left: 32px;
-                text-align: center;
-                font-size: 10px;
-                line-height: 2.2;
-                font-weight: 500;
-                background-color: var(--white);
-                border-radius: 20px;
-                padding: 6px 6px 8px;
+                position: absolute;
+                top: 15%;
+                left: 38%;
 
-                >img:nth-child(2) {
-                    width: 32px;
-                    height: 32px;
-
-                    position: absolute;
-                    top: -10px;
-                    right: 10px;
-                    border-radius: 0;
-                    object-fit: contain;
-
-                    transition: top $transitionSpeed $transitionFunction;
-                }
-
-                img {
+                >div {
+                    position: relative;
+                    text-align: center;
+                    font-size: 10px;
+                    line-height: 2.2;
+                    font-weight: 500;
+                    background-color: var(--white);
                     border-radius: 20px;
-                }
+                    padding: 6px 6px 8px;
 
-                @media (min-width:$tablet-min) {
-                    &:hover {
-                        >img:nth-child(2) {
-                            top: -16px;
+                    >img:nth-child(2) {
+                        width: 32px;
+                        height: 32px;
+
+                        position: absolute;
+                        top: -10px;
+                        right: 10px;
+                        border-radius: 0;
+                        object-fit: contain;
+
+                        transition: top $transitionSpeed $transitionFunction;
+                    }
+
+                    img {
+                        border-radius: 20px;
+                    }
+
+                    @media (min-width:$tablet-min) {
+                        &:hover {
+                            >img:nth-child(2) {
+                                top: -16px;
+                            }
                         }
                     }
                 }
+
 
                 @media (max-width:$smallTablet-max) {
                     margin-top: 24px;
                     margin-left: 0;
                     align-self: end;
                 }
+            }
+
+            &__descr {
+                top: 68%;
+                left: 6.8%;
+                max-width: 400px;
             }
         }
 
